@@ -1,0 +1,18 @@
+@model List<MVCBD.Db.rol>
+
+@{
+    ViewData["Title"] = "Crear Rol";
+}
+
+<h1>Crear Rol</h1>
+
+    <div class ="text-center">
+        <h1 class="display-4">Crear Rol</h1>
+
+        <form asp-action="Save" method="Post">
+            ID: <input type="text" name="rid" id="rid">
+            Nombre: <input type="text" name="rname" id="rname">
+            <button type="submit">Guardar</button>
+        </form>
+
+    </div>

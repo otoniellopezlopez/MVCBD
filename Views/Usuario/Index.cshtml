@@ -1,0 +1,29 @@
+@model IEnumerable<MVCBD.Db.UserAndRolsModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class ="text-center">
+    <table class="table table-striped">
+    <tr>
+        <td>Id Usuario</td>
+        <td>Nombre</td>
+        <td>Password</td>
+        <td>Id Rol</td>
+
+
+    </tr>
+    @foreach (MVCBD.Db.UserAndRolsModel item in Model)
+    {
+        <tr>
+            <td>@item.usuarioDetail.idUsuario</td>
+            <td>@item.usuarioDetail.nombreUsuario</td>
+            <td>@item.usuarioDetail.contraseñaUsuario</td>
+            <td>@item.usuarioRolesDetails.idRol</td>
+        </tr>
+    }
+</table>
+</div>

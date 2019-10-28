@@ -1,0 +1,35 @@
+@model List<MVCBD.Db.user>
+
+@{
+    ViewData["Title"] = "Crear Usuario";
+}
+
+<h1>Crear Usuario</h1>
+
+    <div class ="text-center">
+        <h1 class="display-4">Crear Usuario</h1>
+
+        <form asp-action="Save" method="Post">
+            ID: <input type="text" name="userid" id="userid">
+            Nombre: <input type="text" name="username" id="username">
+            Password: <input type="text" name="userpass" id="userpass">
+
+            <select type="text" name ="select_rol" id="select_rol" 
+                      class="form-control"   
+                      asp-items="@(new SelectList(@ViewBag.ListofRoles,"idRol","nombreRol"))">
+            </select>  
+
+            <div class="form-group">  
+            <div class="row">  
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">  
+                    @if (ViewBag.SelectedValue != null)  
+                    {  
+                        <text></text> @ViewBag.SelectedValue;  
+                    }  
+                </div>  
+            </div>  
+        </div>
+            <button type="submit">Guardar</button>
+        </form>
+
+    </div>

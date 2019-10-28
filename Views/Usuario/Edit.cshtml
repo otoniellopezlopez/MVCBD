@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Editar Rol Page";
+}
+
+
+@model MVCBD.Db.user
+
+<h1>Title</h1>
+
+    <div class ="text-center">
+        <h1 class="display-4">Editar Rol</h1>
+
+        <form asp-action="EditSave" method="Post">
+            <input type="hidden" name="userid" id="userid" value="@Model.idUsuario">
+            Nombre: <input type="text" name="username" id="username" value="@Model.nombreUsuario">
+            Password: <input type="text" name="userpass" id="userpass" value="@Model.contraseñaUsuario">
+            <button type="submit">Guardar</button>
+        </form>
+
+    </div>
